@@ -1,0 +1,118 @@
+{
+  "tier1": {
+    "teamLead": {
+      "name": "AZAD",
+      "img": "https://github.com/Martian745.png",
+      "role": "TEAM LEAD",
+      "socialLinks": {
+        "github": "https://github.com/Martian745",
+        "linkedin": "https://www.linkedin.com/in/azad-prajapati-394805274/"
+      }
+    },
+    "coTeamLead": {
+      "name": "VIBHUTI SINGHAL",
+      "img": "https://github.com/Vibhuti-Singhal.png",
+      "role": "CO-TEAM LEAD",
+      "socialLinks": {
+        "github": "https://github.com/Vibhuti-Singhal",
+        "linkedin": "https://www.linkedin.com/in/vibhuti-singhal-3993613a3/"
+      }
+    }
+  },
+  "tier2": {
+    "techLead": {
+      "name": "VIKAS SINGH",
+      "img": "https://github.com/vikasingh0897.png",
+      "role": "TECH LEAD",
+      "socialLinks": {
+        "github": "https://github.com/vikasingh0897",
+        "linkedin": "https://www.linkedin.com/in/vikasingh0897/"
+      }
+    },
+    "coTechLead": {
+      "name": "MANAS THAKUR",
+      "img": "https://github.com/manasthakur13.png",
+      "role": "CO-TECH LEAD",
+      "socialLinks": {
+        "github": "https://github.com/manasthakur13",
+        "linkedin": "https://www.linkedin.com/in/manas-thakur-280b77347/"
+      }
+    }
+  },
+  "tier3": {
+    "marketingLead": {
+      "name": "RIYA KUMARI",
+      "img": "https://github.com/ri29ya21.png",
+      "role": "MARKETING LEAD",
+      "socialLinks": {
+        "github": "https://github.com/ri29ya21",
+        "linkedin": "https://www.linkedin.com/in/riya-kumari-961b87347/"
+      }
+    },
+    "eventManager": {
+      "name": "SHRUTI CHOUDHARY",
+      "img": "https://github.com/ShrutiChoudhary-23.png",
+      "role": "EVENT MANAGER",
+      "socialLinks": {
+        "github": "https://github.com/ShrutiChoudhary-23",
+        "linkedin": "https://www.linkedin.com/in/shruti-choudhary-162579393/"
+      }
+    },
+    "designLead": {
+      "name": "SHIV GOBIND",
+      "img": "https://github.com/shivgobindmourya.png",
+      "role": "DESIGN LEAD",
+      "socialLinks": {
+        "github": "https://github.com/shivgobindmourya",
+        "linkedin": "https://www.linkedin.com/in/shiv-gobind-012081332/"
+      }
+    },
+    "creativeLead": {
+      "name": "AKTHAR SHAIK",
+      "img": "https://github.com/gytdrop.png",
+      "role": "CREATIVE LEAD",
+      "socialLinks": {
+        "github": "https://github.com/gytdrop",
+        "linkedin": "https://www.linkedin.com/in/gytdrop-akthar/"
+      }
+    },
+    "socialMediaManager": {
+      "name": "SIMRAN WATTS",
+      "img": "https://github.com/Simranwatts.png",
+      "role": "SOCIAL MEDIA MANAGER",
+      "socialLinks": {
+        "github": "https://github.com/Simranwatts",
+        "linkedin": "https://www.linkedin.com/in/simran-watts-9b0992347/"
+      }
+    },
+    "financeManager": {
+      "name": "TUSHAR TANDON",
+      "img": "https://github.com/tushartandon99.png",
+      "role": "FINANCE MANAGER",
+      "socialLinks": {
+        "github": "https://github.com/tushartandon99",
+        "linkedin": "https://www.linkedin.com/in/tushartandon99/"
+      }
+    }
+  },
+  "core": [
+    {
+      "name": "ANIRUDH BANSAL",
+      "img": "https://github.com/stikhead.png",
+      "role": "CORE CONTRIBUTOR",
+      "socialLinks": {
+        "github": "https://github.com/stikhead",
+        "linkedin": "https://www.linkedin.com/in/stichead/"
+      }
+    },
+    {
+      "name": "PRINCE AGARWAL",
+      "img": "https://github.com/princeag1652.png",
+      "role": "CORE CONTRIBUTOR",
+      "socialLinks": {
+        "github": "https://github.com/princeag1652",
+        "linkedin": "https://www.linkedin.com/in/princeag1652/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "MESS MATE",
+  "version": "v0.1.0-beta",
+  "status": "Beta",
+  "desc": "A specialized management solution designed to streamline hostel mess operations. Developed by Anirudh Bansal, this platform solves real-world logistics and feedback issues, currently optimized for high-efficiency throughput in campus dining.",
+  "tech": [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Typescript"
+  ],
+  "repo": "https://github.com/stikhead/MessMate.git",
+  "isPublic": true
+}

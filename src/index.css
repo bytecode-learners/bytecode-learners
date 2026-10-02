@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #50ff69;
+  --color-surface: #0e0e0e;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+  --color-surface-container: #1a1919;
+  
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Your custom utility classes */
+@utility neon-glow {
+  box-shadow: 0 0 20px rgba(80, 255, 105, 0.15);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(80, 255, 105, 0.5);
+}
