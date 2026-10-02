@@ -1,5 +1,15 @@
 {
+  "functions": {
+    "api/cloudinary/[...media].ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
   "rewrites": [
+    {
+      "source": "/api/cloudinary/(.*)",
+      "destination": "/api/cloudinary/[...media]"
+    },
     {
       "source": "/admin(.*)",
       "destination": "/admin/index.html"
@@ -9,4 +19,4 @@
       "destination": "/index.html"
     }
   ]
-}
+}
