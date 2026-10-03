@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -25,13 +24,13 @@ jobs:
       - name: Run Update Script
         run: node scripts/update-readme.js
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      - name: Auto-commit README
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit-message: "docs: auto-update README from TinaCMS content"
-          title: "docs: update README with latest TinaCMS content"
-          body: "This is an automated PR to update the README based on changes to TinaCMS content."
-          branch: "update-readme-bot"
-          base: "main"
-          delete-branch: true
-          author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit_message: |
+            docs: auto-update README from TinaCMS content
+
+            Co-authored-by: vikasingh0897 <vikasingh0897@gmail.com>
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
