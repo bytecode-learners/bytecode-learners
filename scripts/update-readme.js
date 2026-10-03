@@ -48,7 +48,7 @@ async function updateReadme() {
       const eventsDir = path.join(CONTENT_DIR, 'events');
       const eventFiles = (await fs.readdir(eventsDir)).filter(f => f.endsWith('.json'));
       
-      let eventsContent = '<table width="100%">\n  <tr>\n    <th align="left">Event</th>\n    <th align="left">Date</th>\n    <th align="left">Location</th>\n    <th align="left">Tag</th>\n  </tr>\n';
+      let eventsContent = '<table width="100%">\n  <tr>\n    <th align="left">Event<img width="250" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Date<img width="120" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Location<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Tag<img width="80" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n  </tr>\n';
       
       for (const file of eventFiles) {
         const eventData = JSON.parse(await fs.readFile(path.join(eventsDir, file), 'utf-8'));
@@ -90,7 +90,7 @@ async function updateReadme() {
       const teamPath = path.join(CONTENT_DIR, 'team', 'directory.json');
       const teamData = JSON.parse(await fs.readFile(teamPath, 'utf-8'));
       
-      let teamContent = '\n<div align="center">\n\n### 👑 Leadership\n\n<table width="100%">\n';
+      let teamContent = '\n<div align="center">\n\n### 👑 Leadership\n\n<table>\n';
       
       const renderMemberCard = (member, colspan = 1) => {
         if (!member) return '';
@@ -98,11 +98,12 @@ async function updateReadme() {
         const role = member.role || 'Member';
         const img = member.img || 'https://via.placeholder.com/100';
         const github = member.socialLinks?.github || '#';
+        const circleImg = `https://wsrv.nl/?url=${encodeURIComponent(img)}&w=150&mask=circle`;
         
         return `
 <td align="center" colspan="${colspan}">
   <a href="${github}">
-    <img src="${img}" width="100px;" style="border-radius:50%;" alt="${name}"/>
+    <img src="${circleImg}" width="100px;" alt="${name}"/>
     <br />
     <sub><b>${name}</b></sub>
   </a>
@@ -137,7 +138,7 @@ async function updateReadme() {
       teamContent += '</table>\n\n';
       
       if (teamData.core && teamData.core.length > 0) {
-        teamContent += '### 🌟 Core Contributors\n\n<table width="100%">\n';
+        teamContent += '### 🌟 Core Contributors\n\n<table>\n';
         for (let i = 0; i < teamData.core.length; i += 4) {
           const rowMembers = teamData.core.slice(i, i + 4);
           teamContent += '<tr>\n';
