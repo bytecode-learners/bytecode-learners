@@ -3,6 +3,15 @@
   <h1>ByteCode Learners 🚀</h1>
   <p><b>A vibrant community of passionate learners and developers.</b></p>
   <p>🏢 <b>Head Office:</b> Department of Computer Science & Engineering, <br> School of Engineering and Technology (SOET), Central University of Haryana</p>
+
+  <br />
+  <a href="https://github.com/bytecode-learners/bytecode-learners/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
+  <a href="https://github.com/bytecode-learners"><img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-ff69b4.svg?style=for-the-badge" alt="Open Source Love" /></a>
+  <br /><br />
+  <a href="https://github.com/bytecode-learners"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/company/bytecodelearners/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.instagram.com/bytecodelearners"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://bytecode-learners.vercel.app/"><img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" /></a>
 </div>
 
 ---
@@ -37,12 +46,13 @@
 
 ## 📅 Upcoming & Past Events
 <!-- tina-events-start -->
+<div align="center">
 <table width="100%">
   <tr>
-    <th align="left">Event</th>
-    <th align="left">Date</th>
-    <th align="left">Location</th>
-    <th align="left">Tag</th>
+    <th align="left" width="35%">Event</th>
+    <th align="left" width="20%">Date</th>
+    <th align="left" width="30%">Location</th>
+    <th align="left" width="15%">Tag</th>
   </tr>
   <tr>
     <td><b>ByteCode Coding Night</b></td>
@@ -69,6 +79,7 @@
     <td><code>IoT</code></td>
   </tr>
 </table>
+</div>
 <!-- tina-events-end -->
 
 ---
@@ -96,12 +107,12 @@
 
 ### 👑 Leadership
 
-<table width="100%">
+<table>
 <tr>
 
 <td align="center" colspan="1">
   <a href="https://github.com/Martian745">
-    <img src="https://github.com/Martian745.png" width="100px;" style="border-radius:50%;" alt="AZAD"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2FMartian745.png&w=150&mask=circle" width="100px;" alt="AZAD"/>
     <br />
     <sub><b>AZAD</b></sub>
   </a>
@@ -110,7 +121,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/Vibhuti-Singhal">
-    <img src="https://github.com/Vibhuti-Singhal.png" width="100px;" style="border-radius:50%;" alt="VIBHUTI SINGHAL"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2FVibhuti-Singhal.png&w=150&mask=circle" width="100px;" alt="VIBHUTI SINGHAL"/>
     <br />
     <sub><b>VIBHUTI SINGHAL</b></sub>
   </a>
@@ -119,7 +130,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/vikasingh0897">
-    <img src="https://github.com/vikasingh0897.png" width="100px;" style="border-radius:50%;" alt="VIKAS SINGH"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fvikasingh0897.png&w=150&mask=circle" width="100px;" alt="VIKAS SINGH"/>
     <br />
     <sub><b>VIKAS SINGH</b></sub>
   </a>
@@ -128,7 +139,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/manasthakur13">
-    <img src="https://github.com/manasthakur13.png" width="100px;" style="border-radius:50%;" alt="MANAS THAKUR"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fmanasthakur13.png&w=150&mask=circle" width="100px;" alt="MANAS THAKUR"/>
     <br />
     <sub><b>MANAS THAKUR</b></sub>
   </a>
@@ -140,7 +151,7 @@
 
 <td align="center" colspan="1">
   <a href="https://github.com/ri29ya21">
-    <img src="https://github.com/ri29ya21.png" width="100px;" style="border-radius:50%;" alt="RIYA KUMARI"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fri29ya21.png&w=150&mask=circle" width="100px;" alt="RIYA KUMARI"/>
     <br />
     <sub><b>RIYA KUMARI</b></sub>
   </a>
@@ -149,7 +160,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/ShrutiChoudhary-23">
-    <img src="https://github.com/ShrutiChoudhary-23.png" width="100px;" style="border-radius:50%;" alt="SHRUTI CHOUDHARY"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2FShrutiChoudhary-23.png&w=150&mask=circle" width="100px;" alt="SHRUTI CHOUDHARY"/>
     <br />
     <sub><b>SHRUTI CHOUDHARY</b></sub>
   </a>
@@ -158,7 +169,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/shivgobindmourya">
-    <img src="https://github.com/shivgobindmourya.png" width="100px;" style="border-radius:50%;" alt="SHIV GOBIND"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fshivgobindmourya.png&w=150&mask=circle" width="100px;" alt="SHIV GOBIND"/>
     <br />
     <sub><b>SHIV GOBIND</b></sub>
   </a>
@@ -167,7 +178,7 @@
 </td>
 <td align="center" colspan="1">
   <a href="https://github.com/gytdrop">
-    <img src="https://github.com/gytdrop.png" width="100px;" style="border-radius:50%;" alt="AKTHAR SHAIK"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fgytdrop.png&w=150&mask=circle" width="100px;" alt="AKTHAR SHAIK"/>
     <br />
     <sub><b>AKTHAR SHAIK</b></sub>
   </a>
@@ -179,7 +190,7 @@
 
 <td align="center" colspan="2">
   <a href="https://github.com/Simranwatts">
-    <img src="https://github.com/Simranwatts.png" width="100px;" style="border-radius:50%;" alt="SIMRAN WATTS"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2FSimranwatts.png&w=150&mask=circle" width="100px;" alt="SIMRAN WATTS"/>
     <br />
     <sub><b>SIMRAN WATTS</b></sub>
   </a>
@@ -188,7 +199,7 @@
 </td>
 <td align="center" colspan="2">
   <a href="https://github.com/tushartandon99">
-    <img src="https://github.com/tushartandon99.png" width="100px;" style="border-radius:50%;" alt="TUSHAR TANDON"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Ftushartandon99.png&w=150&mask=circle" width="100px;" alt="TUSHAR TANDON"/>
     <br />
     <sub><b>TUSHAR TANDON</b></sub>
   </a>
@@ -200,12 +211,12 @@
 
 ### 🌟 Core Contributors
 
-<table width="100%">
+<table>
 <tr>
 
 <td align="center" colspan="2">
   <a href="https://github.com/stikhead">
-    <img src="https://github.com/stikhead.png" width="100px;" style="border-radius:50%;" alt="ANIRUDH BANSAL"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fstikhead.png&w=150&mask=circle" width="100px;" alt="ANIRUDH BANSAL"/>
     <br />
     <sub><b>ANIRUDH BANSAL</b></sub>
   </a>
@@ -214,7 +225,7 @@
 </td>
 <td align="center" colspan="2">
   <a href="https://github.com/princeag1652">
-    <img src="https://github.com/princeag1652.png" width="100px;" style="border-radius:50%;" alt="PRINCE AGARWAL"/>
+    <img src="https://wsrv.nl/?url=https%3A%2F%2Fgithub.com%2Fprinceag1652.png&w=150&mask=circle" width="100px;" alt="PRINCE AGARWAL"/>
     <br />
     <sub><b>PRINCE AGARWAL</b></sub>
   </a>
@@ -290,63 +301,16 @@ graph TD
 
 ---
 
-## 🚀 Quick Start (Running Locally)
-
-Get up and running with the ByteCode Learners platform in seconds!
-
-<details>
-<summary><b>Show Instructions</b></summary>
-<br>
-
-**1️⃣ Install Dependencies**
-```bash
-npm install
-```
-
-**2️⃣ Launch the Local Server**
-```bash
-npm run dev
-```
-> 💡 *Note: This command elegantly fires up both the Vite development server for the frontend and the local TinaCMS backend for content management.*
-
-**3️⃣ Production Build**
-```bash
-npm run build
-```
-
-</details>
-
----
-
 <div align="center">
-  <h3>Let's Connect! 🌐</h3>
-  <a href="https://github.com/ByteCode-Learners"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://www.linkedin.com/company/bytecodelearners"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/bytecodelearners"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  
-  <br/>
-</div>
+<h2>👨‍💻 Developer & ✨ Contributors</h2>
 
----
+<a href="https://github.com/bytecode-learners/bytecode-learners/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=bytecode-learners/bytecode-learners" alt="ByteCode Learners Contributors" />
+</a>
 
-<div align="center">
+<p>The <b><a href="https://bytecode-learners.vercel.app/">ByteCode Learners</a></b> community platform was actively developed and is maintained with ❤️ by <a href="https://github.com/vikasingh0897">Vikas Singh.</a></p>
 
-## 👨‍💻 Developer & Credits
+<a href="https://github.com/vikasingh0897"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/vikasingh0897/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 
-  <table width="50%">
-    <tr>
-      <td align="center">
-        <a href="https://github.com/vikasingh0897">
-          <img src="https://github.com/vikasingh0897.png" width="120px;" style="border-radius:50%;" alt="Vikas Singh"/>
-          <br />
-          <b>Vikas Singh</b>
-        </a>
-        <i>Creator & Maintainer</i>
-        <br /><br />
-        <a href="https://github.com/vikasingh0897"><img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
-        <a href="https://www.linkedin.com/in/vikasingh0897/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-      </td>
-    </tr>
-  </table>
-  <p>This project and community platform was developed and is maintained with ❤️ by <b>Vikas Singh</b>.</p>
 </div>
