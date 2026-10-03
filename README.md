@@ -49,10 +49,10 @@
 <div align="center">
 <table width="100%">
   <tr>
-    <th align="left" width="35%">Event</th>
-    <th align="left" width="20%">Date</th>
-    <th align="left" width="30%">Location</th>
-    <th align="left" width="15%">Tag</th>
+    <th align="left" width="35%">Event<img width="350" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left" width="20%">Date<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left" width="30%">Location<img width="300" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left" width="15%">Tag<img width="150" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
   </tr>
   <tr>
     <td><b>ByteCode Coding Night</b></td>

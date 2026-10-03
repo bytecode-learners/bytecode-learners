@@ -48,7 +48,7 @@ async function updateReadme() {
       const eventsDir = path.join(CONTENT_DIR, 'events');
       const eventFiles = (await fs.readdir(eventsDir)).filter(f => f.endsWith('.json'));
       
-      let eventsContent = '<div align="center">\n<table width="100%">\n  <tr>\n    <th align="left" width="35%">Event</th>\n    <th align="left" width="20%">Date</th>\n    <th align="left" width="30%">Location</th>\n    <th align="left" width="15%">Tag</th>\n  </tr>\n';
+      let eventsContent = '<div align="center">\n<table width="100%">\n  <tr>\n    <th align="left" width="35%">Event<img width="350" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="20%">Date<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="30%">Location<img width="300" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="15%">Tag<img width="150" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n  </tr>\n';
       
       for (const file of eventFiles) {
         const eventData = JSON.parse(await fs.readFile(path.join(eventsDir, file), 'utf-8'));
