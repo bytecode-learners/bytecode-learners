@@ -1,15 +1,12 @@
-import { useState, useEffect } from 'react';
-import { Terminal, CodeXml, Zap, ShieldCheck, Cpu } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Terminal, CodeXml, Zap, ShieldCheck, Cpu } from "lucide-react";
 
-
-  
-
-import statsDataJSON from '../../content/stats/index.json';
+import statsDataJSON from "../../content/stats/index.json";
 
 const About = () => {
   const [statsData, setStatsData] = useState({
-    lines: '10K+',
-    learners: '400+',
+    lines: "10K+",
+    learners: "400+",
     events: 12,
     achievements: 18,
   });
@@ -17,8 +14,8 @@ const About = () => {
   useEffect(() => {
     if (statsDataJSON) {
       setStatsData({
-        lines: statsDataJSON.lines_committed || '1K+',
-        learners: statsDataJSON.active_learners || '600+',
+        lines: statsDataJSON.lines_committed || "1K+",
+        learners: statsDataJSON.active_learners || "600+",
         events: statsDataJSON.live_events || 12,
         achievements: statsDataJSON.kernel_achievements || 18,
       });
@@ -27,26 +24,26 @@ const About = () => {
 
   const stats = [
     {
-      label: 'Lines_Committed',
+      label: "Lines_Committed",
       value: statsData.lines,
       icon: <CodeXml className="w-10 h-10 md:w-12 md:h-12" />,
     },
     {
-      label: 'Active_Learners',
+      label: "Active_Learners",
       value: statsData.learners,
       icon: <Cpu className="w-10 h-10 md:w-12 md:h-12" />,
-      extraClass: 'lg:mt-8',
+      extraClass: "lg:mt-8",
     },
     {
-      label: 'Live_Events',
+      label: "Live_Events",
       value: statsData.events,
       icon: <Zap className="w-10 h-10 md:w-12 md:h-12" />,
     },
     {
-      label: 'Achievements',
+      label: "Achievements",
       value: statsData.achievements,
       icon: <ShieldCheck className="w-10 h-10 md:w-12 md:h-12" />,
-      extraClass: 'lg:mt-8',
+      extraClass: "lg:mt-8",
     },
   ];
 
@@ -69,7 +66,7 @@ const About = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
             <Terminal size={14} className="opacity-80" />
-            System_Status:{' '}
+            System_Status:{" "}
             <span className="text-white ml-1">Live_Execution</span>
           </div>
 
@@ -83,11 +80,11 @@ const About = () => {
 
           {/* Paragraph with improved hierarchy */}
           <p className="text-on-surface-variant max-w-lg mx-auto lg:mx-0 leading-relaxed font-body text-sm md:text-base border-l-2 border-primary/10 pl-4">
-            The lecture hall is a{' '}
+            The lecture hall is a{" "}
             <span className="bg-red-500/10 text-red-400 px-1 rounded">
               bottleneck
             </span>
-            . We are the hotfix. At{' '}
+            . We are the hotfix. At{" "}
             <span className="text-primary font-mono font-bold italic">
               ByteCode Learners
             </span>
@@ -123,7 +120,7 @@ const About = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`p-5 md:p-8 bg-surface-container-low border border-outline-variant/10 rounded-xl relative overflow-hidden group hover:border-primary/30 transition-all duration-500 ${stat.extraClass || ''}`}
+              className={`p-5 md:p-8 bg-surface-container-low border border-outline-variant/10 rounded-xl relative overflow-hidden group hover:border-primary/30 transition-all duration-500 ${stat.extraClass || ""}`}
             >
               {/* Background Icon Decoration - Hidden on very small screens to save space */}
               <div className="absolute top-0 right-0 p-2 md:p-4 opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500 text-primary">
@@ -135,7 +132,7 @@ const About = () => {
                   {stat.value}
                 </div>
                 <div className="text-[8px] md:text-[10px] font-mono uppercase tracking-[0.15em] md:tracking-[0.2em] text-on-surface-variant font-bold leading-none">
-                  {stat.label.replace('_', ' ')}
+                  {stat.label.replace("_", " ")}
                 </div>
               </div>
 
