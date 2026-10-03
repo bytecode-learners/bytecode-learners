@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DisplayPage from './pages/Display.page';
-import EventsPage from './pages/EventsPage';
-import NotFound from './components/NotFound';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DisplayPage from "./pages/Display.page";
+import EventsPage from "./pages/EventsPage";
+import NotFound from "./components/NotFound";
 
 const AdminRedirect = () => {
-  window.location.href = '/admin/index.html';
+  window.location.href = "/admin/index.html";
   return null;
 };
 

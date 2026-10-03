@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -64,7 +64,7 @@ const NotFound = () => {
                   <p>&gt; SEARCHING... [FAILED]</p>
                   <p>&gt; PINGING... [TIMEOUT]</p>
                   <p className="text-primary/60">
-                    &gt; TARGET_LINK:{' '}
+                    &gt; TARGET_LINK:{" "}
                     <span className="underline">bytecodelearner.tech</span>
                   </p>
                 </div>

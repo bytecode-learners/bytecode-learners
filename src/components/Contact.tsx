@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { Send, Mail, Terminal, Shield, AlertTriangle } from 'lucide-react';
+import React, { useState } from "react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Send, Mail, Terminal, Shield, AlertTriangle } from "lucide-react";
 
 interface SocialLinkProps {
   icon: React.ElementType;
@@ -9,47 +9,47 @@ interface SocialLinkProps {
 }
 
 const Contact = () => {
-  const [status, setStatus] = useState('IDLE');
+  const [status, setStatus] = useState("IDLE");
   const [formData, setFormData] = useState({
-    identifier: '',
-    channel: '',
-    payload: '',
+    identifier: "",
+    channel: "",
+    payload: "",
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('SENDING');
+    setStatus("SENDING");
 
     try {
       // Using an environment variable strictly to keep the script URL private
       const scriptURL = (import.meta as any).env.APPS_SCRIPT_URL;
 
       const response = await fetch(scriptURL, {
-        method: 'POST',
+        method: "POST",
         // Using text/plain to avoid CORS preflight issues with Google Apps Script
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify({
           name: formData.identifier,
           email: formData.channel,
-          message: formData.payload
+          message: formData.payload,
         }),
       });
 
       const result = await response.json();
 
       if (response.ok) {
-        setStatus('SUCCESS');
-        setFormData({ identifier: '', channel: '', payload: '' });
-        setTimeout(() => setStatus('IDLE'), 4000);
+        setStatus("SUCCESS");
+        setFormData({ identifier: "", channel: "", payload: "" });
+        setTimeout(() => setStatus("IDLE"), 4000);
       } else {
-        throw new Error(result.message || 'UPLINK_CRITICAL_FAILURE');
+        throw new Error(result.message || "UPLINK_CRITICAL_FAILURE");
       }
     } catch (err) {
-      console.error('CONTACT_ERROR:', err);
-      setStatus('ERROR');
-      setTimeout(() => setStatus('IDLE'), 4000);
+      console.error("CONTACT_ERROR:", err);
+      setStatus("ERROR");
+      setTimeout(() => setStatus("IDLE"), 4000);
     }
   };
 
@@ -98,7 +98,7 @@ const Contact = () => {
                 </span>
               </div>
               <h2 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white uppercase leading-none">
-                Get In <br />{' '}
+                Get In <br />{" "}
                 <span className="text-primary text-glow">Touch.</span>
               </h2>
               <p className="hidden md:block mt-6 text-zinc-400 max-w-md leading-relaxed border-l-2 border-primary/20 pl-6 italic">
@@ -119,7 +119,11 @@ const Contact = () => {
                 label="Github"
                 href="https://github.com/bytecode-learners"
               />
-              <DesktopSocialLink icon={FaLinkedin} label="LinkedIn" href="https://www.linkedin.com/company/bytecode-learners/" />
+              <DesktopSocialLink
+                icon={FaLinkedin}
+                label="LinkedIn"
+                href="https://www.linkedin.com/company/bytecode-learners/"
+              />
               <DesktopSocialLink
                 icon={FaInstagram}
                 label="Instagram"
@@ -131,13 +135,13 @@ const Contact = () => {
               <p className="text-primary flex gap-2">
                 <span className="opacity-50">
                   [{new Date().toLocaleTimeString()}]
-                </span>{' '}
+                </span>{" "}
                 SYSTEM_NODE: UP
               </p>
               <p className="text-white/40 flex gap-2">
                 <span className="opacity-50">
                   [{new Date().toLocaleTimeString()}]
-                </span>{' '}
+                </span>{" "}
                 LOCATION: REMOTE_SERVER_ALPHA
               </p>
             </div>
@@ -209,27 +213,27 @@ const Contact = () => {
 
               <button
                 type="submit"
-                disabled={status === 'SENDING'}
+                disabled={status === "SENDING"}
                 className={`w-full py-4 font-black font-headline text-xs tracking-[0.3em] uppercase rounded-lg transition-all active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed ${
-                  status === 'ERROR'
-                    ? 'bg-red-500 text-white'
-                    : 'bg-primary text-black hover:shadow-[0_0_30px_rgba(80,255,105,0.4)]'
+                  status === "ERROR"
+                    ? "bg-red-500 text-white"
+                    : "bg-primary text-black hover:shadow-[0_0_30px_rgba(80,255,105,0.4)]"
                 }`}
               >
-                {status === 'SENDING' ? (
+                {status === "SENDING" ? (
                   <Terminal size={18} className="animate-spin" />
-                ) : status === 'ERROR' ? (
+                ) : status === "ERROR" ? (
                   <AlertTriangle size={18} />
                 ) : (
                   <Send size={18} />
                 )}
-                {status === 'SENDING'
-                  ? 'EXECUTING_SEND...'
-                  : status === 'SUCCESS'
-                    ? 'UPLINK_SUCCESS'
-                    : status === 'ERROR'
-                      ? 'UPLINK_FAILED'
-                      : 'EXECUTE_SEND'}
+                {status === "SENDING"
+                  ? "EXECUTING_SEND..."
+                  : status === "SUCCESS"
+                    ? "UPLINK_SUCCESS"
+                    : status === "ERROR"
+                      ? "UPLINK_FAILED"
+                      : "EXECUTE_SEND"}
               </button>
 
               <div className="flex md:hidden justify-center items-center gap-5 mt-6 pt-6 border-t border-white/5">
@@ -245,15 +249,18 @@ const Contact = () => {
                   icon={FaLinkedin}
                   href="https://www.linkedin.com/company/bytecode-learners/"
                 />
-                <MobileSocialCircle icon={FaInstagram} href="https://www.instagram.com/bytecode_learners/" />
+                <MobileSocialCircle
+                  icon={FaInstagram}
+                  href="https://www.instagram.com/bytecode_learners/"
+                />
               </div>
 
-              {status === 'SUCCESS' && (
+              {status === "SUCCESS" && (
                 <div className="text-[10px] font-mono text-primary text-center animate-pulse mt-4">
                   &gt; PACKET_RECEIVED: We will respond shortly.
                 </div>
               )}
-              {status === 'ERROR' && (
+              {status === "ERROR" && (
                 <div className="text-[10px] font-mono text-red-500 text-center animate-pulse mt-4">
                   &gt; ERROR: Primary relay offline. Check console.
                 </div>

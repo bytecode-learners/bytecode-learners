@@ -1,19 +1,27 @@
-import { useEffect, useState } from 'react';
-import { Terminal, Code, Zap, Cpu } from 'lucide-react';
-import RoleCard from './RoleCard';
+import { useEffect, useState } from "react";
+import { Terminal, Code, Zap, Cpu } from "lucide-react";
+import RoleCard from "./RoleCard";
 
 const Team = () => {
-  const [teamData, setTeamData] = useState<{ t1: any[]; t2: any[]; t3: any[]; core: any[] }>({ t1: [], t2: [], t3: [], core: [] });
+  const [teamData, setTeamData] = useState<{
+    t1: any[];
+    t2: any[];
+    t3: any[];
+    core: any[];
+  }>({ t1: [], t2: [], t3: [], core: [] });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
     const fetchTeam = () => {
       try {
-        const files: any = import.meta.glob('../../content/team/directory.json', { eager: true });
+        const files: any = import.meta.glob(
+          "../../content/team/directory.json",
+          { eager: true },
+        );
         const module = Object.values(files)[0] as any;
         const dir = module?.default || module;
-        
+
         if (isMounted && dir) {
           setTeamData({
             t1: [dir.tier1?.teamLead, dir.tier1?.coTeamLead].filter(Boolean),
@@ -23,7 +31,7 @@ const Team = () => {
           });
         }
       } catch (err) {
-        console.error('UPLINK_FAILURE', err);
+        console.error("UPLINK_FAILURE", err);
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -100,7 +108,7 @@ const Team = () => {
               {teamData.core.map((m, idx) => (
                 <a
                   key={idx}
-                  href={m.socialLinks?.linkedin || '#'}
+                  href={m.socialLinks?.linkedin || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="min-w-[85%] sm:min-w-[320px] snap-center p-5 bg-zinc-900/40 border border-white/5 rounded-xl hover:border-primary/40 transition-all duration-300 group shrink-0 flex items-center gap-6"
