@@ -2,13 +2,13 @@
   "title": "BYTECODE LEARNERS",
   "version": "v1.0.0",
   "status": "Active",
-  "desc": "The official digital hub for the Bytecode Learners coding club. This full-stack MERN platform serves as a central registry for events, member contributions, and technical resources, fostering a collaborative ecosystem for developers.",
+  "desc": "The official digital hub for the Bytecode Learners coding club. This Git-backed CMS platform serves as a central registry for events, member contributions, and technical resources, fostering a collaborative ecosystem for developers.",
   "tech": [
-    "MongoDB",
-    "Express.js",
     "React",
-    "Node.js"
+    "Vite",
+    "Tailwind CSS",
+    "TinaCMS"
   ],
-  "repo": "https://github.com/vikasingh0897/ByteCode-Learners.git",
+  "repo": "https://github.com/bytecode-learners/bytecode-learners",
   "isPublic": true
 }

@@ -1,30 +1,30 @@
-import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { NavHashLink } from 'react-router-hash-link';
-import { useNavigate, useLocation } from 'react-router-dom';
-import logoImg from '../assets/bytecode_learners_logo.jpeg';
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { NavHashLink } from "react-router-hash-link";
+import { useNavigate, useLocation } from "react-router-dom";
+import logoImg from "../assets/bytecode_learners_logo.jpeg";
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState('About');
+  const [activeTab, setActiveTab] = useState("About");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const currentHash = location.hash;
-    const validHashes = ['#about', '#events', '#projects', '#team', '#contact'];
+    const validHashes = ["#about", "#events", "#projects", "#team", "#contact"];
 
     if (currentHash && !validHashes.includes(currentHash)) {
-      navigate('/404-not-found');
+      navigate("/404-not-found");
     }
   }, [location, navigate]);
 
   const navItems = [
-    { name: 'About', href: '/#about' },
-    { name: 'Events', href: '/#events' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'Team', href: '/#team' },
-    { name: 'Contact', href: '/#contact' },
+    { name: "About", href: "/#about" },
+    { name: "Events", href: "/#events" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Team", href: "/#team" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -57,15 +57,13 @@ const Header = () => {
               }}
               className={`transition-all duration-200 pl-2 border-l-2 ${
                 activeTab === item.name
-                  ? 'text-primary border-primary'
-                  : 'text-on-surface-variant border-transparent hover:text-on-surface'
+                  ? "text-primary border-primary"
+                  : "text-on-surface-variant border-transparent hover:text-on-surface"
               }`}
             >
               {item.name}
             </NavHashLink>
           ))}
-
-
         </nav>
 
         {/* --- MOBILE HAMBURGER --- */}
@@ -80,7 +78,7 @@ const Header = () => {
       {/* --- MOBILE DROPDOWN --- */}
       <div
         className={`md:hidden absolute w-full bg-zinc-950/95 backdrop-blur-2xl border-b border-primary/10 transition-all duration-300 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="flex flex-col p-6 gap-5 font-label uppercase tracking-widest text-xs">
@@ -95,15 +93,13 @@ const Header = () => {
               }}
               className={`${
                 activeTab === item.name
-                  ? 'text-primary'
-                  : 'text-on-surface-variant hover:text-primary'
+                  ? "text-primary"
+                  : "text-on-surface-variant hover:text-primary"
               }`}
             >
               {item.name}
             </NavHashLink>
           ))}
-
-
         </nav>
       </div>
     </header>

@@ -7,7 +7,8 @@
     "dev": "tinacms dev -c vite",
     "build": "tinacms build && vite build",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "check:all": "npx prettier --check \"src/**/*.{js,jsx,ts,tsx,css,md}\" && npx tsc --noEmit && npm run build"
   },
   "dependencies": {
     "@tinacms/auth": "^1.1.5",

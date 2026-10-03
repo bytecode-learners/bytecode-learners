@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 import {
   Code,
   Layers,
@@ -7,10 +7,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
-} from 'lucide-react';
-
-
-  
+} from "lucide-react";
 
 const Projects = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -23,12 +20,16 @@ const Projects = () => {
     setLoading(true);
     setError(false);
     try {
-      const files = import.meta.glob('../../content/projects/*.json', { eager: true });
-      const projects = Object.values(files).map((module: any) => module.default || module);
+      const files = import.meta.glob("../../content/projects/*.json", {
+        eager: true,
+      });
+      const projects = Object.values(files).map(
+        (module: any) => module.default || module,
+      );
       if (projects.length > 0) {
         setProjectData(projects);
       } else {
-        throw new Error('NO_DATA');
+        throw new Error("NO_DATA");
       }
     } catch (err) {
       setError(true);
@@ -41,12 +42,12 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { clientWidth } = scrollRef.current;
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -clientWidth : clientWidth,
-        behavior: 'smooth',
+        left: direction === "left" ? -clientWidth : clientWidth,
+        behavior: "smooth",
       });
     }
   };
@@ -56,16 +57,16 @@ const Projects = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const indexStr = entry.target.getAttribute('data-index');
-            const index = parseInt(indexStr || '0');
+            const indexStr = entry.target.getAttribute("data-index");
+            const index = parseInt(indexStr || "0");
             setActiveIndex(index);
           }
         });
       },
-      { root: scrollRef.current, threshold: 0.6 }
+      { root: scrollRef.current, threshold: 0.6 },
     );
 
-    const cards = scrollRef.current?.querySelectorAll('.project-card');
+    const cards = scrollRef.current?.querySelectorAll(".project-card");
     cards?.forEach((card) => observer.observe(card));
     return () => observer.disconnect();
   }, [projectData, loading]);
@@ -85,10 +86,10 @@ const Projects = () => {
             <div className="flex items-center gap-2 mb-4">
               <Layers
                 size={16}
-                className={`text-primary ${loading ? 'animate-spin' : ''}`}
+                className={`text-primary ${loading ? "animate-spin" : ""}`}
               />
               <span className="text-primary font-mono tracking-[0.3em] text-[10px] uppercase">
-                {loading ? 'Scanning_Repos...' : 'Repository_Explorer_v2.0'}
+                {loading ? "Scanning_Repos..." : "Repository_Explorer_v2.0"}
               </span>
             </div>
             <h2 className="font-headline text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-2 uppercase">
@@ -101,13 +102,13 @@ const Projects = () => {
           {!loading && !error && (
             <div className="hidden md:flex gap-4">
               <button
-                onClick={() => scroll('left')}
+                onClick={() => scroll("left")}
                 className="p-3 border border-outline-variant/30 rounded-lg hover:border-primary text-on-surface-variant hover:text-primary transition-all active:scale-95"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
-                onClick={() => scroll('right')}
+                onClick={() => scroll("right")}
                 className="p-3 border border-outline-variant/30 rounded-lg hover:border-primary text-on-surface-variant hover:text-primary transition-all active:scale-95"
               >
                 <ChevronRight size={20} />
@@ -148,7 +149,7 @@ const Projects = () => {
               <div
                 ref={scrollRef}
                 className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 pb-8"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {projectData.map((project, index) => (
                   <div
@@ -161,10 +162,10 @@ const Projects = () => {
                       <div className="flex justify-between items-start mb-6">
                         <div className="flex gap-2">
                           <span className="bg-primary/10 text-primary text-[9px] font-mono px-2 py-0.5 rounded border border-primary/20 uppercase">
-                            {project.version || 'v1.0.0'}
+                            {project.version || "v1.0.0"}
                           </span>
                           <span className="bg-surface-container-highest text-on-surface-variant text-[9px] font-mono px-2 py-0.5 rounded border border-outline-variant/20 uppercase">
-                            {project.status || 'Active'}
+                            {project.status || "Active"}
                           </span>
                         </div>
                         {project.repo && (
@@ -190,19 +191,21 @@ const Projects = () => {
                       <div className="mt-auto space-y-6">
                         {/* Tech Stack */}
                         <div className="flex flex-wrap gap-2">
-                          {(project.tech || []).map((tech: string, idx: number) => (
-                            <span
-                              key={idx}
-                              className="text-[9px] font-mono text-on-surface-variant bg-surface-container-low px-2 py-1 rounded border border-outline-variant/10 uppercase"
-                            >
-                              {tech}
-                            </span>
-                          ))}
+                          {(project.tech || []).map(
+                            (tech: string, idx: number) => (
+                              <span
+                                key={idx}
+                                className="text-[9px] font-mono text-on-surface-variant bg-surface-container-low px-2 py-1 rounded border border-outline-variant/10 uppercase"
+                              >
+                                {tech}
+                              </span>
+                            ),
+                          )}
                         </div>
 
                         {/* Action Button */}
                         <a
-                          href={project.repo || '#'}
+                          href={project.repo || "#"}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2 w-full py-3 bg-primary/5 border border-primary/20 rounded-lg text-primary font-mono font-bold text-[10px] tracking-[0.2em] uppercase transition-all hover:bg-primary hover:text-black hover:shadow-[0_0_15px_rgba(80,255,105,0.4)] active:scale-95"
@@ -226,8 +229,8 @@ const Projects = () => {
                     key={idx}
                     className={`h-1.5 transition-all duration-500 rounded-full ${
                       activeIndex === idx
-                        ? 'w-10 bg-primary shadow-[0_0_10px_#50ff69]'
-                        : 'w-2 bg-outline-variant/30'
+                        ? "w-10 bg-primary shadow-[0_0_10px_#50ff69]"
+                        : "w-2 bg-outline-variant/30"
                     }`}
                   />
                 ))}
