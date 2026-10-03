@@ -23,11 +23,11 @@
     <tr>
       <td align="center">
         <h3>💻 Lines Committed</h3>
-        <h2>90k+</h2>
+        <h2>87k+</h2>
       </td>
       <td align="center">
         <h3>👨‍💻 Active Learners</h3>
-        <h2>120+</h2>
+        <h2>130+</h2>
       </td>
       <td align="center">
         <h3>🔴 Live Events</h3>
@@ -35,7 +35,7 @@
       </td>
       <td align="center">
         <h3>🏆 Kernel Achievements</h3>
-        <h2>19</h2>
+        <h2>17</h2>
       </td>
     </tr>
   </table>
