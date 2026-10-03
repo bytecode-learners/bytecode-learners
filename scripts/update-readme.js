@@ -48,13 +48,13 @@ async function updateReadme() {
       const eventsDir = path.join(CONTENT_DIR, 'events');
       const eventFiles = (await fs.readdir(eventsDir)).filter(f => f.endsWith('.json'));
       
-      let eventsContent = '<div align="center">\n<table width="100%">\n  <tr>\n    <th align="left" width="35%">Event<img width="350" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="20%">Date<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="30%">Location<img width="300" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left" width="15%">Tag<img width="150" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n  </tr>\n';
+      let eventsContent = '<table width="100%">\n  <tr>\n    <th align="left">Event<img width="250" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Date<img width="120" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Location<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n    <th align="left">Tag<img width="80" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>\n  </tr>\n';
       
       for (const file of eventFiles) {
         const eventData = JSON.parse(await fs.readFile(path.join(eventsDir, file), 'utf-8'));
         eventsContent += `  <tr>\n    <td><b>${eventData.title}</b></td>\n    <td>${eventData.date}</td>\n    <td>${eventData.location || 'TBA'}</td>\n    <td><code>${eventData.tag || '-'}</code></td>\n  </tr>\n`;
       }
-      eventsContent += '</table>\n</div>\n';
+      eventsContent += '</table>\n';
       
       readme = replaceBetween(readme, '<!-- tina-events-start -->', '<!-- tina-events-end -->', eventsContent);
     } catch (e) {

@@ -46,13 +46,12 @@
 
 ## 📅 Upcoming & Past Events
 <!-- tina-events-start -->
-<div align="center">
 <table width="100%">
   <tr>
-    <th align="left" width="35%">Event<img width="350" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
-    <th align="left" width="20%">Date<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
-    <th align="left" width="30%">Location<img width="300" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
-    <th align="left" width="15%">Tag<img width="150" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left">Event<img width="250" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left">Date<img width="120" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left">Location<img width="200" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
+    <th align="left">Tag<img width="80" height="1" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"></th>
   </tr>
   <tr>
     <td><b>ByteCode Coding Night</b></td>
@@ -79,7 +78,6 @@
     <td><code>IoT</code></td>
   </tr>
 </table>
-</div>
 <!-- tina-events-end -->
 
 ---
