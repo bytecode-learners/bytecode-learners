@@ -1,10 +1,18 @@
-import { MapPin, Terminal, Shield, Zap } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { MapPin, Terminal, Shield, Zap } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const SocialCircle = ({ icon: Icon, href, label }: { icon: any; href: string; label: string }) => (
+  const SocialCircle = ({
+    icon: Icon,
+    href,
+    label,
+  }: {
+    icon: any;
+    href: string;
+    label: string;
+  }) => (
     <a
       href={href}
       target="_blank"
@@ -40,7 +48,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-zinc-400 text-[11px] md:text-xs font-mono leading-relaxed max-w-xs mx-auto lg:mx-0 opacity-80">
-              <span className="text-primary font-bold">{'>'}</span>{' '}
+              <span className="text-primary font-bold">{">"}</span>{" "}
               Transitioning from academic syntax to industrial-grade execution.
             </p>
           </div>
@@ -88,15 +96,15 @@ const Footer = () => {
               {[
                 {
                   icon: FaGithub,
-                  href: 'https://github.com/bytecode-learners/bytecode-learners',
+                  href: "https://github.com/bytecode-learners/bytecode-learners",
                 },
                 {
                   icon: FaLinkedin,
-                  href: 'https://www.linkedin.com/company/bytecode-learners/',
+                  href: "https://www.linkedin.com/company/bytecode-learners/",
                 },
                 {
                   icon: FaInstagram,
-                  href: 'https://www.instagram.com/bytecode_learners/',
+                  href: "https://www.instagram.com/bytecode_learners/",
                 },
               ].map((social, i) => (
                 <a
@@ -142,7 +150,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-[9px] font-bold text-white group-hover:text-primary transition-colors font-mono"
             >
-              Vikas Singh <span className="text-primary/50 ml-0.5">//</span>{' '}
+              Vikas Singh <span className="text-primary/50 ml-0.5">//</span>{" "}
               vikasingh0897
             </a>
           </div>

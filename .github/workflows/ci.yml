@@ -1,0 +1,38 @@
+name: PR Checks & Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-pr:
+    name: Lint & Build Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Code Formatting Check (Prettier)
+        run: npx prettier --check "src/**/*.{js,jsx,ts,tsx,css,md}"
+        continue-on-error: true # Set to false if you want strict formatting enforcement
+
+      - name: Type Checking (TypeScript)
+        run: npx tsc --noEmit
+        continue-on-error: true # Ensures we don't fail immediately if there are minor type errors initially
+
+      - name: Build Test (Catches Build Errors)
+        run: npm run build
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}

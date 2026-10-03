@@ -1,0 +1,37 @@
+name: Update README Dynamically
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**/*.json'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Update Script
+        run: node scripts/update-readme.js
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "docs: auto-update README from TinaCMS content"
+          title: "docs: update README with latest TinaCMS content"
+          body: "This is an automated PR to update the README based on changes to TinaCMS content."
+          branch: "update-readme-bot"
+          base: "main"
+          delete-branch: true
+          author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"

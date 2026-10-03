@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 import {
   Terminal,
   Calendar,
@@ -7,10 +7,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Monitor,
-} from 'lucide-react';
-
-
-  
+} from "lucide-react";
 
 const Events = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -23,12 +20,16 @@ const Events = () => {
     setLoading(true);
     setError(false);
     try {
-      const files = (import.meta as any).glob('../../content/events/*.json', { eager: true });
-      const events = Object.values(files).map((module: any) => module.default || module);
+      const files = (import.meta as any).glob("../../content/events/*.json", {
+        eager: true,
+      });
+      const events = Object.values(files).map(
+        (module: any) => module.default || module,
+      );
       if (events.length > 0) {
         setEventData(events);
       } else {
-        throw new Error('NO_DATA');
+        throw new Error("NO_DATA");
       }
     } catch (err) {
       setError(true);
@@ -47,24 +48,26 @@ const Events = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveIndex(parseInt(entry.target.getAttribute('data-index') || '0'));
+            setActiveIndex(
+              parseInt(entry.target.getAttribute("data-index") || "0"),
+            );
           }
         });
       },
-      { root: scrollRef.current, threshold: 0.6 }
+      { root: scrollRef.current, threshold: 0.6 },
     );
 
-    const cards = scrollRef.current?.querySelectorAll('.event-card');
+    const cards = scrollRef.current?.querySelectorAll(".event-card");
     cards?.forEach((card: Element) => observer.observe(card));
     return () => observer.disconnect();
   }, [eventData, loading]);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { clientWidth } = scrollRef.current;
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -clientWidth : clientWidth,
-        behavior: 'smooth',
+        left: direction === "left" ? -clientWidth : clientWidth,
+        behavior: "smooth",
       });
     }
   };
@@ -84,10 +87,10 @@ const Events = () => {
             <div className="flex items-center gap-2 mb-4">
               <Cpu
                 size={16}
-                className={`text-primary ${loading ? 'animate-spin' : ''}`}
+                className={`text-primary ${loading ? "animate-spin" : ""}`}
               />
               <span className="text-primary font-mono tracking-[0.3em] text-[10px] uppercase">
-                {loading ? 'Fetching_Packets...' : 'Event_Registry_v4.2'}
+                {loading ? "Fetching_Packets..." : "Event_Registry_v4.2"}
               </span>
             </div>
             <h2 className="font-headline text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-2 uppercase">
@@ -100,13 +103,13 @@ const Events = () => {
           {!loading && !error && (
             <div className="hidden md:flex gap-4">
               <button
-                onClick={() => scroll('left')}
+                onClick={() => scroll("left")}
                 className="p-3 border border-outline-variant/30 rounded-lg hover:border-primary text-on-surface-variant hover:text-primary transition-all active:scale-95"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
-                onClick={() => scroll('right')}
+                onClick={() => scroll("right")}
                 className="p-3 border border-outline-variant/30 rounded-lg hover:border-primary text-on-surface-variant hover:text-primary transition-all active:scale-95"
               >
                 <ChevronRight size={20} />
@@ -147,7 +150,7 @@ const Events = () => {
               <div
                 ref={scrollRef}
                 className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 pb-8"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {eventData.slice(0, 6).map((event, index) => (
                   <div
@@ -165,7 +168,7 @@ const Events = () => {
 
                       {/* Tag Overlay */}
                       <span className="absolute top-4 left-4 bg-primary text-black text-[10px] font-black px-2 py-1 rounded flex items-center gap-1.5 tracking-widest uppercase z-30 shadow-lg">
-                        <Monitor size={12} /> {event.tag || 'Activity'}
+                        <Monitor size={12} /> {event.tag || "Activity"}
                       </span>
                     </div>
 
@@ -174,10 +177,10 @@ const Events = () => {
                       <div className="flex items-center gap-4 mb-4">
                         <div className="text-center border-r border-outline-variant/30 pr-4">
                           <span className="block text-2xl font-headline font-bold text-primary">
-                            {event.date?.split(' ')[0] || '??'}
+                            {event.date?.split(" ")[0] || "??"}
                           </span>
                           <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-mono">
-                            {event.date?.split(' ')[1] || 'LOG'}
+                            {event.date?.split(" ")[1] || "LOG"}
                           </span>
                         </div>
                         <div>
@@ -186,7 +189,7 @@ const Events = () => {
                           </h3>
                           <div className="flex items-center gap-1.5 text-[10px] text-on-surface-variant font-mono mt-1">
                             <Calendar size={12} className="text-primary/60" />
-                            LOCATION: {event.location || 'REMOTE'}
+                            LOCATION: {event.location || "REMOTE"}
                           </div>
                         </div>
                       </div>
@@ -207,13 +210,13 @@ const Events = () => {
                     key={idx}
                     className={`h-1.5 transition-all duration-500 rounded-full ${
                       activeIndex === idx
-                        ? 'w-10 bg-primary shadow-[0_0_10px_#50ff69]'
-                        : 'w-2 bg-outline-variant/30'
+                        ? "w-10 bg-primary shadow-[0_0_10px_#50ff69]"
+                        : "w-2 bg-outline-variant/30"
                     }`}
                   />
                 ))}
               </div>
-              
+
               {eventData.length > 6 && (
                 <div className="mt-12 flex justify-center">
                   <a
